@@ -10,7 +10,7 @@
 
 挺简单的，就一个递归即可
 
-![img](C:\Users\Administrator\Desktop\python\2022_AI_lesson\实验一（决策树）\img.png)
+![img](https://github.com/Eric-is-good/2022_AI_lesson/blob/main/%E5%AE%9E%E9%AA%8C%E4%B8%80%EF%BC%88%E5%86%B3%E7%AD%96%E6%A0%91%EF%BC%89/img.png)
 
 提供以下 API
 
