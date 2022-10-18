@@ -25,7 +25,7 @@ class DecisionTree:
         self.testdata = pd.read_csv(self.test_addr)
 
         self.column_count = dict(
-                [(ds, list(pd.unique(self.traindata[ds]))) for ds in self.traindata.iloc[:, :-1].columns])
+            [(ds, list(pd.unique(self.traindata[ds]))) for ds in self.traindata.iloc[:, :-1].columns])
 
         return self.traindata, self.testdata, self.column_count
 
@@ -106,11 +106,16 @@ class DecisionTree:
         res = sorted(res.items(), key=lambda x: x[1][1], reverse=True)
         return res[0][0], res[0][1][0]
 
-    def Encode_discrete_data(self, data, best_feature):
+    def drop_exist_feature(self, data, best_feature):
         attr = pd.unique(data[best_feature])
         new_data = [(nd, data[data[best_feature] == nd]) for nd in attr]
         new_data = [(n[0], n[1].drop([best_feature], axis=1)) for n in new_data]
         return new_data
+
+    ##################################################################################
+    ##################################   prunning   ##################################
+
+
 
     ##################################################################################
     #############################   train and predict   ##############################
@@ -144,7 +149,7 @@ class DecisionTree:
                 no_exist_attr = set(self.column_count[best_feature]) - set(exist_vals)  # 少的那些特征
                 for no_feat in no_exist_attr:
                     Tree[best_feature][no_feat] = self.get_most_label(data)  # 缺失的特征分类为当前类别最多的
-            for item in self.Encode_discrete_data(data, best_feature):  # 根据特征值的不同递归创建决策树
+            for item in self.drop_exist_feature(data, best_feature):  # 根据特征值的不同递归创建决策树
                 Tree[best_feature][item[0]] = self.train(item[1])
 
         self.Tree = Tree
@@ -156,11 +161,14 @@ class DecisionTree:
             dictlist.append(data.loc[i].to_dict())
         return dictlist
 
-    def predict(self, data):
+    def predict(self, data, tree=None):
+        if tree is None:
+            tree = self.Tree
+
         result = []
         dictlist = self.excel_to_dictlist(data)
         for item in dictlist:
-            result.append(self.predict_one(item))
+            result.append(self.predict_one(item, tree))
         return result
 
     def predict_one(self, each_test_data, left_tree=None):
@@ -188,10 +196,13 @@ class DecisionTree:
             class_label = left_tree
         return class_label
 
-    def score(self, data=None):
+    def score(self, tree=None, data=None):
         if data is None:
             data = self.testdata
-        result = self.predict(data)
+        if tree is None:
+            tree = self.Tree
+
+        result = self.predict(data, tree)
         result = np.array(result)
         ground_trues = data.iloc[:, -1:]
         ground_trues = np.array(ground_trues).ravel()
@@ -204,11 +215,16 @@ class DecisionTree:
 
 if __name__ == '__main__':
     tree = DecisionTree(
-        train_addr="../../data/data_word.csv",
-        test_addr="../../data/data_word.csv",
-        # continuous_features=["1", "2", "3", "4", "5"]
+        train_addr="../../data/traindata.txt",
+        test_addr="../../data/testdata.txt",
+        continuous_features=["1", "2", "3", "4", "5"]
     )
     tree.train()
-    print(tree.Tree)
+    tree1 = tree.Tree
+    print(tree1)
     print(tree.score())
     tree.plot_tree()
+
+    ####################################################################################
+
+    print(tree1)
