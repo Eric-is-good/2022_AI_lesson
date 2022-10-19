@@ -16,7 +16,6 @@ class MSE(object):
         self.loss = np.sum(0.5 * np.square(self.pred - self.label))
         return self.loss
 
-    def backward(self, grad=None):
-        self.grad = (self.pred - self.label)
-        ret_grad = np.sum(self.grad, axis=0)
-        return np.expand_dims(ret_grad, axis=0)
+    def backward(self, grad=None):             # grad [batch_size, class_num]
+        self.grad = self.pred - self.label
+        return self.grad

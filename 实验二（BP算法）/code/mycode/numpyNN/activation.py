@@ -33,6 +33,6 @@ class Sigmoid(BaseNetwork):
         self.output = 1 / (1 + np.exp(-self.input))
         return self.output
 
-    def backward(self, grad):
-        grad *= self.output * (1 - self.output)
+    def backward(self, grad):      # grad [batch_size, class_num]
+        grad = self.output * (1 - self.output) * grad
         return grad

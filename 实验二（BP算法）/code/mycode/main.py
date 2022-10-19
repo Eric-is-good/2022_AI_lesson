@@ -56,30 +56,58 @@ class Net(BaseNetwork):
 
 net = Net()
 criterion = net.criterion
-optimizer = SGD(net.parameters(), lr=0.004, momentum=0.9)
+optimizer = SGD(net.parameters(), lr=0.001, momentum=0.9)
 
 traindatas = data_loader("../../data/Iris-train.txt")
 testdatas = data_loader("../../data/Iris-test.txt")
 x = traindatas[:, :-1]
 y = one_hot(traindatas[:, -1:], 3)
 
-px, py = [], []
-for i in tqdm.tqdm(range(5000)):
-    running_loss = 0.0
-    for row in range(x.shape[0]):
-        optimizer.zero_grad()
-        input = x[row:row + 1]
-        label = y[row:row + 1]
-        pred = net(input)
-        loss = criterion(pred, label)
-        running_loss += loss
-        net.backward()
-        optimizer.step()
-    px.append(i)
-    py.append(running_loss/75)
 
-    if i % 100 == 0:
-        print(running_loss/75)
+# px, py = [], []
+# for i in tqdm.tqdm(range(5000)):
+#     running_loss = 0.0
+#     for row in range(x.shape[0]):
+#         optimizer.zero_grad()
+#         input = x[row:row + 1]
+#         label = y[row:row + 1]
+#         pred = net(input)
+#         loss = criterion(pred, label)
+#         running_loss += loss
+#         net.backward()
+#         optimizer.step()
+#     px.append(i)
+#     py.append(running_loss/75)
+#
+#     if i % 100 == 0:
+#         print(running_loss/75)
+#
+
+
+px, py = [], []
+for i in tqdm.tqdm(range(10000)):
+    optimizer.zero_grad()
+    pred = net(x)
+    loss = criterion(pred, y)
+    net.backward()
+    optimizer.step()
+    px.append(i)
+    py.append(loss/75)
+    # if i % 1000 == 0:
+    #     print(loss/75)
+
+optimizer = SGD(net.parameters(), lr=0.00001, momentum=0.9)
+for i in tqdm.tqdm(range(10000, 30000)):
+    optimizer.zero_grad()
+    pred = net(x)
+    loss = criterion(pred, y)
+    net.backward()
+    optimizer.step()
+    px.append(i)
+    py.append(loss/75)
+    # if i % 1000 == 0:
+    #     print(loss/75)
+
 
 plt.cla()
 plt.plot(px, py, 'r-', lw=1)

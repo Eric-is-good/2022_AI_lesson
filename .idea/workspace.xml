@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a186458d-519e-4193-8b7b-c0b17661906c" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/2022_AI_lesson.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/test_demo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/2022人工智能挑战课.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/实验一（决策树）/code/mycode/DecisionTree.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验一（决策树）/code/mycode/DecisionTree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/activation.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/activation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/loss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/test_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/test_demo.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,8 +143,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.use_pytorch" />
         <item itemvalue="Python.test_demo" />
+        <item itemvalue="Python.use_pytorch" />
         <item itemvalue="Python.activation" />
       </list>
     </recent_temporary>
@@ -162,6 +160,7 @@
       <workItem from="1666019881654" duration="2001000" />
       <workItem from="1666093570464" duration="15582000" />
       <workItem from="1666113429202" duration="705000" />
+      <workItem from="1666146987076" duration="5486000" />
     </task>
     <servers />
   </component>
@@ -180,10 +179,21 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/nn.PY</url>
+          <line>63</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/2022_AI_lesson$main.coverage" NAME="main 覆盖结果" MODIFIED="1666114099172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
+    <SUITE FILE_PATH="coverage/2022_AI_lesson$main.coverage" NAME="main 覆盖结果" MODIFIED="1666155445070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
     <SUITE FILE_PATH="coverage/2022_AI_lesson$activation.coverage" NAME="activation 覆盖结果" MODIFIED="1666108112161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN" />
     <SUITE FILE_PATH="coverage/2022_AI_lesson$use_pytorch.coverage" NAME="use_pytorch 覆盖结果" MODIFIED="1666113266118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code" />
-    <SUITE FILE_PATH="coverage/2022_AI_lesson$test_demo.coverage" NAME="test_demo 覆盖结果" MODIFIED="1666109264642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
+    <SUITE FILE_PATH="coverage/2022_AI_lesson$test_demo.coverage" NAME="test_demo 覆盖结果" MODIFIED="1666149104556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
   </component>
 </project>
