@@ -96,15 +96,15 @@ for i in tqdm.tqdm(range(10000)):
     # if i % 1000 == 0:
     #     print(loss/75)
 
-optimizer = SGD(net.parameters(), lr=0.00001, momentum=0.9)
-for i in tqdm.tqdm(range(10000, 30000)):
-    optimizer.zero_grad()
-    pred = net(x)
-    loss = criterion(pred, y)
-    net.backward()
-    optimizer.step()
-    px.append(i)
-    py.append(loss/75)
+# optimizer = SGD(net.parameters(), lr=0.00001, momentum=0.9)
+# for i in tqdm.tqdm(range(10000, 30000)):
+#     optimizer.zero_grad()
+#     pred = net(x)
+#     loss = criterion(pred, y)
+#     net.backward()
+#     optimizer.step()
+#     px.append(i)
+#     py.append(loss/75)
     # if i % 1000 == 0:
     #     print(loss/75)
 

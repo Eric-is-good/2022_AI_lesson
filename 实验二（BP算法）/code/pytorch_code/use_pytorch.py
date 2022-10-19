@@ -2,6 +2,7 @@ import torch
 import torch.nn.functional as F
 from matplotlib import pyplot as plt
 from torch.optim import SGD
+from tqdm import tqdm
 
 
 def data_loader(addr):
@@ -47,14 +48,12 @@ optimizer = SGD(net.parameters(), lr=0.1)
 loss_func = torch.nn.MSELoss()
 
 px, py = [], []
-for i in range(5000):
+for i in tqdm(range(10000)):
     prediction = net(x)
     loss = loss_func(prediction, y)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-
-    print(i, "loss:", loss.item())
     px.append(i)
     py.append(loss.item())
 

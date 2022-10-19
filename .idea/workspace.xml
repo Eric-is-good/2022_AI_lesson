@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a186458d-519e-4193-8b7b-c0b17661906c" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/2022_AI_lesson.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/2022_AI_lesson.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/activation.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/activation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/loss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/test_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/test_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/test_demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code/use_pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code/use_pytorch.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +47,37 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ParallelCaculate" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.use_pytorch">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="2022_AI_lesson" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="activation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2022_AI_lesson" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -142,10 +168,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.main" />
-        <item itemvalue="Python.test_demo" />
         <item itemvalue="Python.use_pytorch" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.activation" />
+        <item itemvalue="Python.test_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -161,6 +187,10 @@
       <workItem from="1666093570464" duration="15582000" />
       <workItem from="1666113429202" duration="705000" />
       <workItem from="1666146987076" duration="5486000" />
+      <workItem from="1666167407639" duration="1316000" />
+      <workItem from="1666168743977" duration="2106000" />
+      <workItem from="1666178068351" duration="27000" />
+      <workItem from="1666178195593" duration="109000" />
     </task>
     <servers />
   </component>
@@ -179,21 +209,10 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/nn.PY</url>
-          <line>63</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/2022_AI_lesson$main.coverage" NAME="main 覆盖结果" MODIFIED="1666155445070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
-    <SUITE FILE_PATH="coverage/2022_AI_lesson$activation.coverage" NAME="activation 覆盖结果" MODIFIED="1666108112161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN" />
-    <SUITE FILE_PATH="coverage/2022_AI_lesson$use_pytorch.coverage" NAME="use_pytorch 覆盖结果" MODIFIED="1666113266118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code" />
+    <SUITE FILE_PATH="coverage/2022_AI_lesson$main.coverage" NAME="main 覆盖结果" MODIFIED="1666169359595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
+    <SUITE FILE_PATH="coverage/2022_AI_lesson$activation.coverage" NAME="activation 覆盖结果" MODIFIED="1666168000301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN" />
+    <SUITE FILE_PATH="coverage/2022_AI_lesson$use_pytorch.coverage" NAME="use_pytorch 覆盖结果" MODIFIED="1666169492778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code" />
     <SUITE FILE_PATH="coverage/2022_AI_lesson$test_demo.coverage" NAME="test_demo 覆盖结果" MODIFIED="1666149104556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
   </component>
 </project>

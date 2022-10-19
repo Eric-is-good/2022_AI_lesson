@@ -29,3 +29,49 @@ score = tree.score()
 
 tree.plot_tree()
 ```
+
+
+
+
+
+## 实验二   BP 算法
+
+按照 pytorch 风格使用 numpy 重写前向后向
+
+```
+class Linear(BaseNetwork):
+    def __init__(self, inplanes, outplanes):
+        super(Linear, self).__init__()
+        self.weight = np.random.rand(inplanes, outplanes) * 2 - 1
+        self.bias = np.random.rand(outplanes) * 2 - 1
+        self.input = None
+        self.output = None
+        self.wgrad = np.zeros(self.weight.shape)
+        self.bgrad = np.zeros(self.bias.shape)
+        self.variable = Variable(self.weight, self.wgrad, self.bias, self.bgrad)
+
+    def parameters(self):
+        return self.variable
+
+    def forward(self, *x):
+        x = x[0]
+        self.input = x
+        self.output = np.dot(self.input, self.weight) + self.bias
+        return self.output
+
+    def backward(self, grad):
+        self.bgrad = grad
+        self.wgrad += np.dot(self.input.T, grad)
+        grad = np.dot(grad, self.weight.T)
+        return grad
+```
+
+训练也模仿 pytorch
+
+```
+optimizer.zero_grad()
+pred = net(x)
+loss = criterion(pred, y)
+net.backward()
+optimizer.step()
+```
