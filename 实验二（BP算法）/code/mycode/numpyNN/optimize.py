@@ -11,7 +11,10 @@ class SGD(object):
 
     def step(self):
         for parameters in self.parameters:
-            v = parameters.v_weight * self.momentum - self.lr * parameters.wgrad
-            parameters.weight += v
-            parameters.bias -= self.lr * parameters.bgrad
+            parameters.v_weight = parameters.v_weight * self.momentum - self.lr * parameters.wgrad
+            parameters.v_bias = parameters.v_bias * self.momentum - self.lr * parameters.bgrad
+
+            parameters.weight += parameters.v_weight
+            parameters.bias += parameters.v_bias
+
 

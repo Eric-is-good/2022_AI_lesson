@@ -15,7 +15,10 @@ def data_loader(addr):
             for i in line:
                 line_num.append(float(i))
             datas.append(line_num)
-        datas = torch.tensor(datas)
+    datas = torch.tensor(datas)
+    mean = datas[:, :-1].mean(0)
+    std = datas[:, :-1].std(0)
+    datas[:, :-1] = (datas[:, :-1] - mean) / std
     return datas
 
 
@@ -67,4 +70,3 @@ index = torch.argmax(pre, dim=1)
 acc = torch.sum(index == testdatas[:, -1]) / testdatas.shape[0]
 
 print(acc)
-

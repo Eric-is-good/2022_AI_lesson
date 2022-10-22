@@ -35,16 +35,20 @@ class Variable(object):
     def __init__(self, weight, wgrad, bias, bgrad):
         self.weight = weight
         self.wgrad = wgrad
-        self.v_weight = np.zeros(self.weight.shape)
+
         self.bias = bias
         self.bgrad = bgrad
+
+        self.v_weight = np.zeros(self.weight.shape)
+        self.v_bias = np.zeros(self.bias.shape)
 
 
 class Linear(BaseNetwork):
     def __init__(self, inplanes, outplanes):
         super(Linear, self).__init__()
-        self.weight = np.random.rand(inplanes, outplanes) * 2 - 1
-        self.bias = np.random.rand(outplanes) * 2 - 1
+        self.weight = np.random.normal(0, 1, (inplanes, outplanes))
+        self.bias = np.random.normal(0, 1, (outplanes,))
+
         self.input = None
         self.output = None
         self.wgrad = np.zeros(self.weight.shape)

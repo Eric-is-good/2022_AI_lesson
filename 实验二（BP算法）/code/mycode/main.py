@@ -20,7 +20,11 @@ def data_loader(addr):
             for i in line:
                 line_num.append(float(i))
             datas.append(line_num)
-        datas = np.asarray(datas)
+    datas = np.asarray(datas)
+
+    mean = datas[:, :-1].mean(0)
+    std = datas[:, :-1].std(0)
+    datas[:, :-1] = (datas[:, :-1] - mean) / std
     return datas
 
 
@@ -56,7 +60,7 @@ class Net(BaseNetwork):
 
 net = Net()
 criterion = net.criterion
-optimizer = SGD(net.parameters(), lr=0.001, momentum=0.9)
+optimizer = SGD(net.parameters(), lr=0.0005, momentum=0.9)
 
 traindatas = data_loader("../../data/Iris-train.txt")
 testdatas = data_loader("../../data/Iris-test.txt")
@@ -93,8 +97,6 @@ for i in tqdm.tqdm(range(10000)):
     optimizer.step()
     px.append(i)
     py.append(loss/75)
-    # if i % 1000 == 0:
-    #     print(loss/75)
 
 # optimizer = SGD(net.parameters(), lr=0.00001, momentum=0.9)
 # for i in tqdm.tqdm(range(10000, 30000)):
