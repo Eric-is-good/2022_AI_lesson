@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a186458d-519e-4193-8b7b-c0b17661906c" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/实验三（ModelArts）/MNIST/model/checkpoint_net_2-15_234.ckpt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/实验三（ModelArts）/MNIST/predict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/实验三（ModelArts）/MNIST/train.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/activation.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/activation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/nn.PY" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/nn.PY" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/__init__.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/optimize.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN/optimize.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code/use_pytorch.py" beforeDir="false" afterPath="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code/use_pytorch.py" afterDir="false" />
     </list>
@@ -35,6 +37,10 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/实验三（ModelArts）/MNIST/predict.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/实验三（ModelArts）/MNIST/train.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="2GGfWvHvg5CtE6JzFZNm682g5MG" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -53,13 +59,21 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ParallelCaculate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/实验三（ModelArts）/MNIST/model" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager" selected="Python.use_pytorch">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\python\2022_AI_lesson\实验三（ModelArts）\MNIST\model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\python\2022_AI_lesson\实验三（ModelArts）\MNIST" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.predict">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="2022_AI_lesson" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -126,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_demo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="predict" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="2022_AI_lesson" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -134,12 +148,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/实验三（ModelArts）/MNIST" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/实验二（BP算法）/code/mycode/test_demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/实验三（ModelArts）/MNIST/predict.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="2022_AI_lesson" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/实验三（ModelArts）/MNIST" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/实验三（ModelArts）/MNIST/train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,12 +206,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.activation" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.train" />
+      <item itemvalue="Python.use_pytorch" />
+      <item itemvalue="Python.predict" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.use_pytorch" />
+        <item itemvalue="Python.predict" />
+        <item itemvalue="Python.train" />
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.use_pytorch" />
         <item itemvalue="Python.activation" />
-        <item itemvalue="Python.test_demo" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +240,13 @@
       <workItem from="1666178068351" duration="27000" />
       <workItem from="1666178195593" duration="109000" />
       <workItem from="1666397507629" duration="5886000" />
-      <workItem from="1666403884999" duration="1322000" />
+      <workItem from="1666403884999" duration="2061000" />
+      <workItem from="1666406380987" duration="2624000" />
+      <workItem from="1666409041797" duration="566000" />
+      <workItem from="1666412100965" duration="5804000" />
+      <workItem from="1667003815604" duration="8849000" />
+      <workItem from="1667021579357" duration="5092000" />
+      <workItem from="1667035465257" duration="2000" />
     </task>
     <servers />
   </component>
@@ -216,9 +266,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/2022_AI_lesson$main.coverage" NAME="main 覆盖结果" MODIFIED="1666404887917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
+    <SUITE FILE_PATH="coverage/2022_AI_lesson$train.coverage" NAME="train 覆盖结果" MODIFIED="1667034559365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验三（ModelArts）/MNIST" />
+    <SUITE FILE_PATH="coverage/2022_AI_lesson$main.coverage" NAME="main 覆盖结果" MODIFIED="1666419359563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
     <SUITE FILE_PATH="coverage/2022_AI_lesson$activation.coverage" NAME="activation 覆盖结果" MODIFIED="1666399691426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode/numpyNN" />
-    <SUITE FILE_PATH="coverage/2022_AI_lesson$use_pytorch.coverage" NAME="use_pytorch 覆盖结果" MODIFIED="1666404900988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code" />
+    <SUITE FILE_PATH="coverage/2022_AI_lesson$use_pytorch.coverage" NAME="use_pytorch 覆盖结果" MODIFIED="1666407017911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/pytorch_code" />
     <SUITE FILE_PATH="coverage/2022_AI_lesson$test_demo.coverage" NAME="test_demo 覆盖结果" MODIFIED="1666149104556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/实验二（BP算法）/code/mycode" />
   </component>
 </project>

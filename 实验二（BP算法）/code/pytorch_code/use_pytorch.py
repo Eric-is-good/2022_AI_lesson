@@ -1,3 +1,4 @@
+import numpy as np
 import torch
 import torch.nn.functional as F
 from matplotlib import pyplot as plt
@@ -40,33 +41,38 @@ class Net(torch.nn.Module):
         out = F.sigmoid(x)
         return out
 
+acclist = []
+for i in range(10):
+    traindatas = data_loader("../../data/Iris-train.txt")
+    testdatas = data_loader("../../data/Iris-test.txt")
+    x = traindatas[:, :-1]
+    y = one_hot(traindatas[:, -1:], 3)
 
-traindatas = data_loader("../../data/Iris-train.txt")
-testdatas = data_loader("../../data/Iris-test.txt")
-x = traindatas[:, :-1]
-y = one_hot(traindatas[:, -1:], 3)
+    net = Net(n_feature=4, n_hidden=5, n_output=3)
+    optimizer = SGD(net.parameters(), lr=0.1)
+    loss_func = torch.nn.MSELoss()
 
-net = Net(n_feature=4, n_hidden=5, n_output=3)
-optimizer = SGD(net.parameters(), lr=0.1)
-loss_func = torch.nn.MSELoss()
+    px, py = [], []
+    for i in tqdm(range(10000)):
+        prediction = net(x)
+        loss = loss_func(prediction, y)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+        px.append(i)
+        py.append(loss.item())
 
-px, py = [], []
-for i in tqdm(range(10000)):
-    prediction = net(x)
-    loss = loss_func(prediction, y)
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
-    px.append(i)
-    py.append(loss.item())
+    plt.cla()
+    plt.plot(px, py, 'r-', lw=1)
+    plt.text(0, 0, 'Loss=%.4f' % min(py), fontdict={'size': 20, 'color': 'red'})
+    plt.pause(0.1)
 
-plt.cla()
-plt.plot(px, py, 'r-', lw=1)
-plt.text(0, 0, 'Loss=%.4f' % min(py), fontdict={'size': 20, 'color': 'red'})
-plt.pause(0.1)
+    pre = net(testdatas[:, :-1])
+    index = torch.argmax(pre, dim=1)
+    acc = torch.sum(index == testdatas[:, -1]) / testdatas.shape[0]
 
-pre = net(testdatas[:, :-1])
-index = torch.argmax(pre, dim=1)
-acc = torch.sum(index == testdatas[:, -1]) / testdatas.shape[0]
+    print(acc)
+    acclist.append(acc.numpy())
 
-print(acc)
+acclist = np.asarray(acclist)
+print(acclist.mean(0))
