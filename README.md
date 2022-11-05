@@ -75,3 +75,15 @@ loss = criterion(pred, y)
 net.backward()
 optimizer.step()
 ```
+
+
+
+## 实验三，四     MindSpore 实验
+
+
+
+熟悉了 mindspore 和 modelarts ，哎，必须用 **华为**
+
+GPU 服务器价格真贵
+
+虽然华为全部**报销**，但我还是喜欢 pytorch
